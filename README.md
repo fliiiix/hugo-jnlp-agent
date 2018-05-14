@@ -1,0 +1,1 @@
+# hugo-jnlp-slave
