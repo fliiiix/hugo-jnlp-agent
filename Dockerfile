@@ -1,4 +1,4 @@
-FROM jenkins/jnlp-slave:3.19-1-alpine
+FROM jenkins/jnlp-slave:3.19-1
 MAINTAINER suren <zxjlwt@126.com>
 
 ENV HUGO_VERSION 0.40.3
