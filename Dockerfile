@@ -1,5 +1,5 @@
 FROM jenkins/jnlp-slave:3.19-1
-AUTHOR Rick <linuxsuren@gmail.com>
+MAINTAINER Rick <linuxsuren@gmail.com>
 
 ENV HUGO_VERSION 0.54.0
 ENV HUGO_ARCH Linux-64bit
