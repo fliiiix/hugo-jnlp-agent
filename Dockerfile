@@ -1,7 +1,7 @@
 FROM jenkins/jnlp-slave:3.19-1
-MAINTAINER suren <zxjlwt@126.com>
+AUTHOR Rick <linuxsuren@gmail.com>
 
-ENV HUGO_VERSION 0.40.3
+ENV HUGO_VERSION 0.54.0
 ENV HUGO_ARCH Linux-64bit
 
 RUN pwd
