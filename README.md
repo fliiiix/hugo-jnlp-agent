@@ -16,6 +16,6 @@ You can add this agent to your kubernetes plugin, like:
 Name=jnlp
 Docker image=surenpi/hugo-jnlp-agent
 Command to run=
-Arguments to pass to the command=
+Arguments to pass to the command=${computer.jnlpmac} ${computer.name}
 Allocate pseudo-TTY=false
 ```
