@@ -1,0 +1,31 @@
+name: docker ci
+
+on: [push]
+
+jobs:
+        build:
+            runs-on: ubuntu-latest
+
+            steps:
+            - uses: actions/checkout@v1
+            - name: build docker image
+              run: |
+                docker build . --tag l33tname/hugo-jnlp-agent:${{ github.sha }}
+                docker tag l33tname/hugo-jnlp-agent:${{ github.sha }} l33tname/hugo-jnlp-agent:unstable
+            - name: tag latest and version on release
+              run: |
+                docker tag l33tname/hugo-jnlp-agent:${{ github.sha }} l33tname/hugo-jnlp-agent:$(git describe --tags)
+                docker tag l33tname/hugo-jnlp-agent:${{ github.sha }} l33tname/hugo-jnlp-agent:latest
+              if: startsWith(github.event.ref, 'refs/tags')
+
+            - uses: azure/docker-login@v1
+              with:
+                username: 'l33tname'
+                password: ${{ secrets.DOCKERHUB }}
+
+            - name: publish docker image
+              run: |
+                docker push l33tname/hugo-jnlp-agent
+              env:
+                DOCKERHUB: ${{ secrets.DOCKERHUB }}
+
