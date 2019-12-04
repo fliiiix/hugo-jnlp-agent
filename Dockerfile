@@ -1,4 +1,4 @@
-FROM jenkins/jnlp-slave:3.35-5
+FROM jenkins/jnlp-slave:3.19-1
 MAINTAINER l33tname <sirl33tname@gmail.com>
 
 ENV HUGO_VERSION 0.60.1
