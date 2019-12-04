@@ -6,7 +6,7 @@ You can find [this](https://hub.docker.com/r/surenpi/hugo-jnlp-agent) from hub.d
 
 You can running a Jnlp-Agent use below cmd line:
 
-`docker run --rm surenpi/hugo-jnlp-agent hugo help`
+`docker run --rm l33tname/hugo-jnlp-agent hugo help`
 
 # Kubernets Plugin
 

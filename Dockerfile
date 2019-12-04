@@ -1,5 +1,5 @@
 FROM jenkins/jnlp-slave:3.19-1
-MAINTAINER Rick <linuxsuren@gmail.com>
+MAINTAINER l33tname <tdb>
 
 ENV HUGO_VERSION 0.60.1
 ENV HUGO_ARCH Linux-64bit
