@@ -2,7 +2,7 @@ name: update repo
 
 on:
   schedule:
-    - cron: "0 * * * */1"
+    - cron: "*/5 * * * *"
 
 jobs:
   ci:
